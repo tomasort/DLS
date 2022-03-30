@@ -16,6 +16,9 @@ pip install torch
 pip install keras 
 pip install torchvision 
 pip install jupyter
+pip install tqdm 
+pip install numpy
+pip install matplotlib
 # uncomment the following line if you have requirements.txt file
 # pip install -r requirements.txt
 
