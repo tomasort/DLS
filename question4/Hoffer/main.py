@@ -49,7 +49,7 @@ parser.add_argument('--dtype', default='float',
                     help='type of tensor: ' +
                     ' | '.join(torch_dtypes.keys()) +
                     ' (default: float)')
-parser.add_argument('--device', default='cpu',
+parser.add_argument('--device', default='cuda',
                     help='device assignment ("cpu" or "cuda")')
 parser.add_argument('--device-ids', default=[0], type=int, nargs='+',
                     help='device ids assignment (e.g 0 1 2 3')
@@ -63,7 +63,7 @@ parser.add_argument('--dist-backend', default='nccl', type=str,
                     help='distributed backend')
 parser.add_argument('-j', '--workers', default=8, type=int, metavar='N',
                     help='number of data loading workers (default: 8)')
-parser.add_argument('--epochs', default=2, type=int, metavar='N',
+parser.add_argument('--epochs', default=100, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--start-epoch', default=-1, type=int, metavar='N',
                     help='manual epoch number (useful on restarts). -1 for unset (will start at 0)')

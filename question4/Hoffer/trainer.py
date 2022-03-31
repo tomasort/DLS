@@ -227,7 +227,9 @@ class Trainer(object):
             # Calculate running average of accuracy
             pred = torch.max(output.data, 1)[1]
             total += target.size(0)
-            correct += (pred == target.data).sum().item()
+            # print(f"pred: {pred.get_device()}, target: {target.get_device()}")
+            # correct += (pred == target.data).sum().item()
+            correct += (pred.to(self.device) == target.to(self.device).data).sum().item()
             acc = correct / total
             meters['acc'].update(float(acc), inputs.size(0))
             # measure accuracy and record loss
