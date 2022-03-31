@@ -212,111 +212,6 @@ class ResNet(nn.Module):
         x = self.fc(x)
         return x
 
-
-class ResNet_imagenet(ResNet):
-    num_train_images = 1281167
-
-    def __init__(self, num_classes=1000, inplanes=64,
-                 block=Bottleneck, residual_block=None, layers=[3, 4, 23, 3],
-                 width=[64, 128, 256, 512], expansion=4, groups=[1, 1, 1, 1],
-                 regime='normal', scale_lr=1, ramp_up_lr=True, ramp_up_epochs=5, checkpoint_segments=0, mixup=False, epochs=90,
-                 base_devices=4, base_device_batch=64, base_duplicates=1, base_image_size=224, mix_size_regime='D+'):
-        super(ResNet_imagenet, self).__init__()
-        self.inplanes = inplanes
-        self.conv1 = nn.Conv2d(3, self.inplanes, kernel_size=7, stride=2, padding=3,
-                               bias=False)
-        self.bn1 = nn.BatchNorm2d(self.inplanes)
-        self.relu = nn.ReLU(inplace=True)
-        self.maxpool = nn.MaxPool2d(kernel_size=3, stride=2, padding=1)
-
-        for i in range(len(layers)):
-            layer = self._make_layer(block=block, planes=width[i], blocks=layers[i], expansion=expansion,
-                                     stride=1 if i == 0 else 2, residual_block=residual_block, groups=groups[i],
-                                     mixup=mixup)
-            if checkpoint_segments > 0:
-                layer_checkpoint_segments = min(checkpoint_segments, layers[i])
-                layer = CheckpointModule(layer, layer_checkpoint_segments)
-            setattr(self, 'layer%s' % str(i + 1), layer)
-
-        self.avgpool = nn.AdaptiveAvgPool2d(1)
-        self.fc = nn.Linear(width[-1] * expansion, num_classes)
-
-        init_model(self)
-        batch_size = base_devices * base_device_batch
-        num_steps_epoch = math.floor(self.num_train_images / batch_size)
-        ramp_up_steps = num_steps_epoch * ramp_up_epochs
-
-        # base regime
-        self.regime = [
-            {'epoch': 0, 'optimizer': 'SGD', 'lr': scale_lr * 1e-1,
-             'momentum': 0.9, 'regularizer': weight_decay_config(1e-4)},
-            {'epoch': 30, 'lr': scale_lr * 1e-2},
-            {'epoch': 60, 'lr': scale_lr * 1e-3},
-            {'epoch': 80, 'lr': scale_lr * 1e-4}
-        ]
-        if 'cutmix' in regime:
-            self.regime = [
-                {'epoch': 0, 'optimizer': 'SGD', 'lr': scale_lr * 1e-1,
-                 'momentum': 0.9, 'regularizer': weight_decay_config(1e-4)},
-                {'epoch': 75, 'lr': scale_lr * 1e-2},
-                {'epoch': 150, 'lr': scale_lr * 1e-3},
-                {'epoch': 225, 'lr': scale_lr * 1e-4}
-            ]        
-        if 'linear' in regime:
-            self.regime = [
-                {'epoch': 0, 'optimizer': 'SGD', 'lr': scale_lr * 1e-1,
-                 'momentum': 0.9, 'regularizer': weight_decay_config(1e-4),
-                 'step_lambda': linear_scale(scale_lr * 1e-1, 0, num_steps_epoch * epochs)},
-            ]
-            if ramp_up_lr:
-                self.regime[0]['lr'] = 0
-                self.regime['step_lambda'] = linear_scale(
-                    0.1, scale_lr * 1e-1, ramp_up_steps)
-                self.regime.append({'epoch': ramp_up_epochs,
-                                    'step_lambda': linear_scale(scale_lr * 1e-1, 0, num_steps_epoch * (epochs - ramp_up_epochs), ramp_up_steps)})
-                ramp_up_lr = False
-
-        # Sampled regimes from "Mix & Match: training convnets with mixed image sizes for improved accuracy, speed and scale resiliency"
-        if 'sampled' in regime:
-            # add gradient smoothing
-            self.regime[0]['regularizer'] = [{'name': 'GradSmooth', 'momentum': 0.9, 'log': False},
-                                             weight_decay_config(1e-4)]
-            ramp_up_lr = False
-            self.data_regime = None
-
-            def size_config(size): return mixsize_config(size, base_size=base_image_size, base_batch=base_device_batch, base_duplicates=base_duplicates,
-                                                         adapt_batch=mix_size_regime == 'B+', adapt_duplicates=mix_size_regime == 'D+')
-            increment = int(base_image_size / 7)
-
-            if '144' in regime:
-                self.sampled_data_regime = [
-                    (0.1, size_config(base_image_size+increment)),
-                    (0.1, size_config(base_image_size)),
-                    (0.6, size_config(base_image_size - 3*increment)),
-                    (0.2, size_config(base_image_size - 4*increment)),
-                ]
-            else:  # sampled-224
-                self.sampled_data_regime = [
-                    (0.8/6, size_config(base_image_size - 3*increment)),
-                    (0.8/6, size_config(base_image_size - 2*increment)),
-                    (0.8/6, size_config(base_image_size - increment)),
-                    (0.2, size_config(base_image_size)),
-                    (0.8/6, size_config(base_image_size + increment)),
-                    (0.8/6, size_config(base_image_size + 2*increment)),
-                    (0.8/6, size_config(base_image_size + 3*increment)),
-                ]
-
-            self.data_eval_regime = [
-                {'epoch': 0, 'input_size': base_image_size}
-            ]
-
-        if ramp_up_lr and scale_lr > 1:  # add learning rate ramp-up
-            self.regime[0]['step_lambda'] = linear_scale(
-                0.1, 0.1 * scale_lr, ramp_up_steps)
-            self.regime.insert(
-                1, {'epoch': ramp_up_epochs,  'lr': scale_lr * 1e-1})
-
-
 class ResNet_cifar(ResNet):
 
     def __init__(self, num_classes=10, inplanes=16,
@@ -384,52 +279,15 @@ class ResNet_cifar(ResNet):
 
 def resnet(**config):
     dataset = config.pop('dataset', 'imagenet')
-    if config.pop('quantize', False):
-        from .modules.quantize import QConv2d, QLinear, RangeBN
-        torch.nn.Linear = QLinear
-        torch.nn.Conv2d = QConv2d
-        torch.nn.BatchNorm2d = RangeBN
-
     bn_norm = config.pop('bn_norm', None)
-    if bn_norm is not None:
-        from .modules.lp_norm import L1BatchNorm2d, TopkBatchNorm2d
-        if bn_norm == 'L1':
-            torch.nn.BatchNorm2d = L1BatchNorm2d
-        if bn_norm == 'TopK':
-            torch.nn.BatchNorm2d = TopkBatchNorm2d
-
-    if 'imagenet' in dataset:
-        config.setdefault('num_classes', 1000)
-        depth = config.pop('depth', 50)
-        if depth == 18:
-            config.update(dict(block=BasicBlock,
-                               layers=[2, 2, 2, 2],
-                               expansion=1))
-        if depth == 34:
-            config.update(dict(block=BasicBlock,
-                               layers=[3, 4, 6, 3],
-                               expansion=1))
-        if depth == 50:
-            config.update(dict(block=Bottleneck, layers=[3, 4, 6, 3]))
-        if depth == 101:
-            config.update(dict(block=Bottleneck, layers=[3, 4, 23, 3]))
-        if depth == 152:
-            config.update(dict(block=Bottleneck, layers=[3, 8, 36, 3]))
-        if depth == 200:
-            config.update(dict(block=Bottleneck, layers=[3, 24, 36, 3]))
-
-        return ResNet_imagenet(**config)
-
-    elif dataset == 'cifar10':
+    config.setdefault('depth', 44)
+    if dataset == 'cifar10':
         config.setdefault('num_classes', 10)
-        config.setdefault('depth', 44)
         return ResNet_cifar(block=BasicBlock, **config)
 
     elif dataset == 'cifar100':
         config.setdefault('num_classes', 100)
-        config.setdefault('depth', 44)
         return ResNet_cifar(block=BasicBlock, **config)
-
 
 def resnet_se(**config):
     config['residual_block'] = SEBlock

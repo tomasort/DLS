@@ -179,7 +179,9 @@ class Trainer(object):
     def forward(self, data_loader, num_steps=None, training=False, average_output=False, chunk_batch=1):
 
         meters = {name: AverageMeter()
-                  for name in ['step', 'data', 'loss', 'prec1', 'prec5']}
+                  for name in ['step', 'data', 'loss', 'prec1', 'prec5', 'acc']}
+        correct = 0.
+        total = 0.
         if training and self.grad_clip > 0:
             meters['grad'] = AverageMeter()
 
@@ -191,9 +193,12 @@ class Trainer(object):
             results = {name: meter.avg for name, meter in meters.items()}
             results['error1'] = 100. - results['prec1']
             results['error5'] = 100. - results['prec5']
+            meters['total_time'] = time.time() - meters['total_time'] 
+            meters['total_step'] = meters['step'].sum
             return results
 
         end = time.time()
+        meters['total_time'] = end
 
         for i, (inputs, target) in enumerate(data_loader):
             duplicates = inputs.dim() > 4  # B x D x C x H x W
@@ -219,7 +224,12 @@ class Trainer(object):
                                             training=training,
                                             average_output=average_output,
                                             chunk_batch=chunk_batch)
-
+            # Calculate running average of accuracy
+            pred = torch.max(output.data, 1)[1]
+            total += target.size(0)
+            correct += (pred == target.data).sum().item()
+            acc = correct / total
+            meters['acc'].update(float(acc), inputs.size(0))
             # measure accuracy and record loss
             prec1, prec5 = accuracy(output, target, topk=(1, 5))
             meters['loss'].update(float(loss), inputs.size(0))
@@ -239,6 +249,7 @@ class Trainer(object):
                              'Loss {meters[loss].val:.4f} ({meters[loss].avg:.4f})\t'
                              'Prec@1 {meters[prec1].val:.3f} ({meters[prec1].avg:.3f})\t'
                              'Prec@5 {meters[prec5].val:.3f} ({meters[prec5].avg:.3f})\t'
+                             'Acc {meters[acc].val:.3f} ({meters[acc].avg:.3f})\t'
                              .format(
                                  self.epoch, i, len(data_loader),
                                  phase='TRAINING' if training else 'EVALUATING',

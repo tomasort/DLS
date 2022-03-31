@@ -63,11 +63,11 @@ parser.add_argument('--dist-backend', default='nccl', type=str,
                     help='distributed backend')
 parser.add_argument('-j', '--workers', default=8, type=int, metavar='N',
                     help='number of data loading workers (default: 8)')
-parser.add_argument('--epochs', default=90, type=int, metavar='N',
+parser.add_argument('--epochs', default=2, type=int, metavar='N',
                     help='number of total epochs to run')
 parser.add_argument('--start-epoch', default=-1, type=int, metavar='N',
                     help='manual epoch number (useful on restarts). -1 for unset (will start at 0)')
-parser.add_argument('-b', '--batch-size', default=256, type=int,
+parser.add_argument('-b', '--batch-size', default=512, type=int,
                     metavar='N', help='mini-batch size (default: 256)')
 parser.add_argument('--eval-batch-size', default=-1, type=int,
                     help='mini-batch size (default: same as training)')
@@ -137,23 +137,23 @@ def main_worker(args):
     torch.manual_seed(args.seed)
     time_stamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     if args.evaluate:
-        args.results_dir = '/tmp'
+        args.results_dir = '/scratch/tor213/tmp'
     if args.save == '':
         args.save = time_stamp
-    save_path = path.join(args.results_dir, args.save)
+    save_path = path.join(args.results_dir, args.save + "_" + args.model +  "44_m-" + str(args.duplicates))
 
     args.distributed = args.local_rank >= 0 or args.world_size > 1
 
-    if args.distributed:
-        dist.init_process_group(backend=args.dist_backend, init_method=args.dist_init,
-                                world_size=args.world_size, rank=args.local_rank)
-        args.local_rank = dist.get_rank()
-        args.world_size = dist.get_world_size()
-        if args.dist_backend == 'mpi':
-            # If using MPI, select all visible devices
-            args.device_ids = list(range(torch.cuda.device_count()))
-        else:
-            args.device_ids = [args.local_rank]
+    # if args.distributed:
+    #     dist.init_process_group(backend=args.dist_backend, init_method=args.dist_init,
+    #                             world_size=args.world_size, rank=args.local_rank)
+    #     args.local_rank = dist.get_rank()
+    #     args.world_size = dist.get_world_size()
+    #     if args.dist_backend == 'mpi':
+    #         # If using MPI, select all visible devices
+    #         args.device_ids = list(range(torch.cuda.device_count()))
+    #     else:
+    #         args.device_ids = [args.local_rank]
 
     if not (args.distributed and args.local_rank > 0):
         if not path.exists(save_path):
