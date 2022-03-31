@@ -193,12 +193,12 @@ class Trainer(object):
             results = {name: meter.avg for name, meter in meters.items()}
             results['error1'] = 100. - results['prec1']
             results['error5'] = 100. - results['prec5']
-            meters['total_time'] = time.time() - meters['total_time'] 
+            meters['total_time'] = time.time() - start_time
             meters['total_step'] = meters['step'].sum
             return results
 
         end = time.time()
-        meters['total_time'] = end
+        start_time = end
 
         for i, (inputs, target) in enumerate(data_loader):
             duplicates = inputs.dim() > 4  # B x D x C x H x W
