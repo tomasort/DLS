@@ -9,11 +9,6 @@
 
 module purge
 source /scratch/tor213/.env/bin/activate
-cd /scratch/tor213/HPC_training_scripts/
+cd /scratch/tor213/DLS
 
-python /scratch/tor213/DLS/question4/Hoffer/main.py --results-dir /scratch/tor213/DLS/question4/Hoffer/results/
-python /scratch/tor213/DLS/question4/Hoffer/main.py --results-dir /scratch/tor213/DLS/question4/Hoffer/results/ --model-config "{'depth': 44}"  --duplicates 2 --cutout -b 64  --epochs 100
-python /scratch/tor213/DLS/question4/Hoffer/main.py --results-dir /scratch/tor213/DLS/question4/Hoffer/results/ --model-config "{'depth': 44}"  --duplicates 4 --cutout -b 64 --epochs 100
-python /scratch/tor213/DLS/question4/Hoffer/main.py --results-dir /scratch/tor213/DLS/question4/Hoffer/results/ --model-config "{'depth': 44}"  --duplicates 8 --cutout -b 64 --epochs 100
-python /scratch/tor213/DLS/question4/Hoffer/main.py --results-dir /scratch/tor213/DLS/question4/Hoffer/results/ --model-config "{'depth': 44}"  --duplicates 16 --cutout -b 64 --epochs 100
-python /scratch/tor213/DLS/question4/Hoffer/main.py --results-dir /scratch/tor213/DLS/question4/Hoffer/results/ --model-config "{'depth': 44}"  --duplicates 32 --cutout -b 64 --epochs 100
+python question4/Hoffer/main.py --results-dir question4/Hoffer/results/
