@@ -1,0 +1,62 @@
+2022-03-31 16:05:07,295 - INFO - saving to results/2022-03-31_16-05-07_resnet44_m-8
+2022-03-31 16:05:07,297 - DEBUG - run arguments: Namespace(adapt_grad_norm=None, autoaugment=False, batch_size=64, chunk_batch=1, config_file=None, cutmix=None, cutout=True, dataset='cifar10', datasets_dir='~/Datasets', device='cuda', device_ids=[0], dist_backend='nccl', dist_init='env://', distributed=False, drop_optim_state=False, dtype='float', duplicates=8, epochs=100, eval_batch_size=-1, evaluate=None, grad_clip=-1, input_size=None, label_smoothing=0, local_rank=-1, loss_scale=1, lr=0.1, mixup=None, model='resnet', model_config="{'depth': 44}", momentum=0.9, optimizer='SGD', print_freq=10, results_dir='results/', resume='', save='2022-03-31_16-05-07', save_all=False, seed=123, start_epoch=-1, sync_bn=False, tensorwatch=False, tensorwatch_port=0, weight_decay=0, workers=8, world_size=-1)
+2022-03-31 16:05:07,297 - INFO - creating model resnet
+2022-03-31 16:05:07,342 - INFO - created model with configuration: {'dataset': 'cifar10', 'depth': 44}
+2022-03-31 16:05:07,342 - INFO - number of parameters: 661338
+2022-03-31 16:05:12,223 - INFO - optimization regime: [{'epoch': 0, 'optimizer': 'SGD', 'lr': 0.1, 'momentum': 0.9, 'regularizer': {'name': 'WeightDecay', 'value': 0.0001, 'log': False, 'filter': {'parameter_name': <function weight_decay_config.<locals>.<lambda> at 0x149ff0678a60>, 'module': <function weight_decay_config.<locals>.<lambda> at 0x149ff0678820>}}}, {'epoch': 81, 'lr': 0.01}, {'epoch': 122, 'lr': 0.001}, {'epoch': 164, 'lr': 0.0001}]
+2022-03-31 16:05:12,223 - INFO - data regime: Current: {'datasets_path': '~/Datasets', 'name': 'cifar10', 'split': 'train', 'augment': True, 'input_size': None, 'batch_size': 64, 'shuffle': True, 'num_workers': 8, 'pin_memory': True, 'drop_last': True, 'distributed': False, 'duplicates': 8, 'autoaugment': False, 'cutout': {'holes': 1, 'length': 16}}
+ Regime:None
+2022-03-31 16:05:12,223 - INFO - 
+Starting Epoch: 1
+
+2022-03-31 16:05:15,742 - DEBUG - OPTIMIZER - setting lr = 0.1
+2022-03-31 16:05:15,742 - DEBUG - OPTIMIZER - setting momentum = 0.9
+2022-03-31 16:05:16,503 - INFO - TRAINING - Epoch: [0][0/781]	Time 4.280 (4.280)	Data 3.517 (3.517)	Loss 2.3068 (2.3068)	Prec@1 7.031 (7.031)	Prec@5 42.383 (42.383)	Acc 0.070 (0.070)	
+2022-03-31 16:05:17,522 - INFO - TRAINING - Epoch: [0][10/781]	Time 0.092 (0.482)	Data 0.000 (0.321)	Loss 2.3304 (2.3035)	Prec@1 11.328 (13.903)	Prec@5 53.516 (55.273)	Acc 0.139 (0.121)	
+2022-03-31 16:05:18,532 - INFO - TRAINING - Epoch: [0][20/781]	Time 0.113 (0.300)	Data 0.000 (0.168)	Loss 2.2553 (2.2595)	Prec@1 9.961 (15.597)	Prec@5 63.867 (59.552)	Acc 0.156 (0.137)	
+2022-03-31 16:05:19,558 - INFO - TRAINING - Epoch: [0][30/781]	Time 0.092 (0.237)	Data 0.000 (0.114)	Loss 2.1630 (2.2303)	Prec@1 25.781 (17.049)	Prec@5 67.578 (62.380)	Acc 0.170 (0.145)	
+2022-03-31 16:05:20,578 - INFO - TRAINING - Epoch: [0][40/781]	Time 0.121 (0.204)	Data 0.003 (0.086)	Loss 2.1933 (2.1896)	Prec@1 22.461 (18.031)	Prec@5 74.609 (65.944)	Acc 0.180 (0.153)	
+2022-03-31 16:05:21,629 - INFO - TRAINING - Epoch: [0][50/781]	Time 0.113 (0.184)	Data 0.000 (0.070)	Loss 1.9208 (2.1597)	Prec@1 24.219 (18.899)	Prec@5 80.273 (67.999)	Acc 0.189 (0.159)	
+2022-03-31 16:05:22,604 - INFO - TRAINING - Epoch: [0][60/781]	Time 0.099 (0.170)	Data 0.000 (0.058)	Loss 1.9290 (2.1322)	Prec@1 22.070 (19.723)	Prec@5 82.617 (69.813)	Acc 0.197 (0.165)	
+2022-03-31 16:05:23,649 - INFO - TRAINING - Epoch: [0][70/781]	Time 0.092 (0.161)	Data 0.000 (0.051)	Loss 2.0483 (2.1184)	Prec@1 23.633 (19.966)	Prec@5 82.617 (71.110)	Acc 0.200 (0.170)	
+2022-03-31 16:05:24,766 - INFO - TRAINING - Epoch: [0][80/781]	Time 0.124 (0.155)	Data 0.000 (0.045)	Loss 1.9941 (2.1031)	Prec@1 26.953 (20.607)	Prec@5 72.266 (72.087)	Acc 0.206 (0.174)	
+2022-03-31 16:05:25,823 - INFO - TRAINING - Epoch: [0][90/781]	Time 0.110 (0.149)	Data 0.000 (0.040)	Loss 2.0306 (2.0869)	Prec@1 23.047 (21.139)	Prec@5 73.828 (73.000)	Acc 0.211 (0.178)	
+2022-03-31 16:05:26,877 - INFO - TRAINING - Epoch: [0][100/781]	Time 0.091 (0.145)	Data 0.000 (0.036)	Loss 1.9194 (2.0703)	Prec@1 28.516 (21.877)	Prec@5 77.344 (73.797)	Acc 0.219 (0.181)	
+2022-03-31 16:05:27,894 - INFO - TRAINING - Epoch: [0][110/781]	Time 0.113 (0.141)	Data 0.000 (0.033)	Loss 1.8886 (2.0583)	Prec@1 27.734 (22.431)	Prec@5 80.078 (74.344)	Acc 0.224 (0.185)	
+2022-03-31 16:05:28,957 - INFO - TRAINING - Epoch: [0][120/781]	Time 0.104 (0.138)	Data 0.009 (0.031)	Loss 1.8462 (2.0442)	Prec@1 25.586 (22.771)	Prec@5 83.008 (75.011)	Acc 0.228 (0.188)	
+2022-03-31 16:05:30,035 - INFO - TRAINING - Epoch: [0][130/781]	Time 0.099 (0.136)	Data 0.000 (0.028)	Loss 1.9174 (2.0304)	Prec@1 31.250 (23.156)	Prec@5 83.203 (75.741)	Acc 0.232 (0.192)	
+2022-03-31 16:05:31,064 - INFO - TRAINING - Epoch: [0][140/781]	Time 0.126 (0.134)	Data 0.009 (0.026)	Loss 1.8330 (2.0183)	Prec@1 30.859 (23.587)	Prec@5 86.719 (76.371)	Acc 0.236 (0.195)	
+2022-03-31 16:05:32,203 - INFO - TRAINING - Epoch: [0][150/781]	Time 0.115 (0.132)	Data 0.000 (0.025)	Loss 1.8162 (2.0112)	Prec@1 31.250 (23.818)	Prec@5 85.742 (76.861)	Acc 0.238 (0.197)	
+2022-03-31 16:05:33,237 - INFO - TRAINING - Epoch: [0][160/781]	Time 0.102 (0.131)	Data 0.000 (0.023)	Loss 1.9786 (2.0015)	Prec@1 26.758 (24.144)	Prec@5 80.859 (77.329)	Acc 0.241 (0.200)	
+2022-03-31 16:05:34,245 - INFO - TRAINING - Epoch: [0][170/781]	Time 0.092 (0.129)	Data 0.000 (0.022)	Loss 1.8747 (1.9932)	Prec@1 23.047 (24.455)	Prec@5 80.078 (77.754)	Acc 0.245 (0.203)	
+2022-03-31 16:05:35,333 - INFO - TRAINING - Epoch: [0][180/781]	Time 0.097 (0.128)	Data 0.000 (0.021)	Loss 1.7615 (1.9823)	Prec@1 31.641 (24.831)	Prec@5 88.281 (78.188)	Acc 0.248 (0.205)	
+2022-03-31 16:05:36,370 - INFO - TRAINING - Epoch: [0][190/781]	Time 0.124 (0.126)	Data 0.000 (0.020)	Loss 1.8459 (1.9740)	Prec@1 34.766 (25.080)	Prec@5 81.250 (78.562)	Acc 0.251 (0.207)	
+2022-03-31 16:05:37,416 - INFO - TRAINING - Epoch: [0][200/781]	Time 0.105 (0.125)	Data 0.000 (0.019)	Loss 1.7730 (1.9654)	Prec@1 33.984 (25.275)	Prec@5 86.914 (78.966)	Acc 0.253 (0.210)	
+2022-03-31 16:05:38,490 - INFO - TRAINING - Epoch: [0][210/781]	Time 0.120 (0.124)	Data 0.000 (0.018)	Loss 1.6896 (1.9567)	Prec@1 34.570 (25.527)	Prec@5 91.406 (79.333)	Acc 0.255 (0.212)	
+2022-03-31 16:05:39,546 - INFO - TRAINING - Epoch: [0][220/781]	Time 0.135 (0.124)	Data 0.000 (0.018)	Loss 1.9178 (1.9497)	Prec@1 31.445 (25.855)	Prec@5 81.641 (79.614)	Acc 0.259 (0.214)	
+2022-03-31 16:05:40,591 - INFO - TRAINING - Epoch: [0][230/781]	Time 0.110 (0.123)	Data 0.000 (0.017)	Loss 1.7882 (1.9433)	Prec@1 33.203 (26.119)	Prec@5 87.891 (79.943)	Acc 0.261 (0.216)	
+2022-03-31 16:05:41,618 - INFO - TRAINING - Epoch: [0][240/781]	Time 0.101 (0.122)	Data 0.000 (0.016)	Loss 1.6011 (1.9338)	Prec@1 42.773 (26.533)	Prec@5 90.430 (80.269)	Acc 0.265 (0.218)	
+2022-03-31 16:05:42,641 - INFO - TRAINING - Epoch: [0][250/781]	Time 0.092 (0.121)	Data 0.000 (0.016)	Loss 1.6389 (1.9250)	Prec@1 40.234 (26.895)	Prec@5 88.867 (80.585)	Acc 0.269 (0.220)	
+2022-03-31 16:05:43,689 - INFO - TRAINING - Epoch: [0][260/781]	Time 0.107 (0.121)	Data 0.000 (0.015)	Loss 1.9803 (1.9205)	Prec@1 29.688 (27.047)	Prec@5 79.492 (80.773)	Acc 0.270 (0.222)	
+2022-03-31 16:05:44,773 - INFO - TRAINING - Epoch: [0][270/781]	Time 0.104 (0.120)	Data 0.000 (0.015)	Loss 1.7454 (1.9141)	Prec@1 33.984 (27.302)	Prec@5 84.766 (81.027)	Acc 0.273 (0.223)	
+2022-03-31 16:05:45,789 - INFO - TRAINING - Epoch: [0][280/781]	Time 0.118 (0.119)	Data 0.000 (0.014)	Loss 1.6189 (1.9052)	Prec@1 46.484 (27.663)	Prec@5 90.234 (81.299)	Acc 0.277 (0.225)	
+2022-03-31 16:05:46,847 - INFO - TRAINING - Epoch: [0][290/781]	Time 0.092 (0.119)	Data 0.000 (0.014)	Loss 1.9156 (1.8983)	Prec@1 27.148 (27.921)	Prec@5 82.227 (81.550)	Acc 0.279 (0.227)	
+2022-03-31 16:05:47,907 - INFO - TRAINING - Epoch: [0][300/781]	Time 0.091 (0.119)	Data 0.000 (0.013)	Loss 1.5132 (1.8903)	Prec@1 43.164 (28.209)	Prec@5 89.648 (81.771)	Acc 0.282 (0.229)	
+2022-03-31 16:05:48,926 - INFO - TRAINING - Epoch: [0][310/781]	Time 0.101 (0.118)	Data 0.000 (0.013)	Loss 1.6491 (1.8836)	Prec@1 33.984 (28.549)	Prec@5 89.648 (81.946)	Acc 0.285 (0.231)	
+2022-03-31 16:05:50,001 - INFO - TRAINING - Epoch: [0][320/781]	Time 0.111 (0.118)	Data 0.000 (0.013)	Loss 1.8442 (1.8786)	Prec@1 29.883 (28.777)	Prec@5 82.031 (82.109)	Acc 0.288 (0.232)	
+2022-03-31 16:05:51,060 - INFO - TRAINING - Epoch: [0][330/781]	Time 0.092 (0.117)	Data 0.000 (0.012)	Loss 1.5757 (1.8716)	Prec@1 41.797 (29.044)	Prec@5 87.695 (82.310)	Acc 0.290 (0.234)	
+2022-03-31 16:05:52,082 - INFO - TRAINING - Epoch: [0][340/781]	Time 0.116 (0.117)	Data 0.000 (0.012)	Loss 1.7796 (1.8644)	Prec@1 34.180 (29.352)	Prec@5 88.867 (82.519)	Acc 0.294 (0.236)	
+2022-03-31 16:05:53,125 - INFO - TRAINING - Epoch: [0][350/781]	Time 0.092 (0.117)	Data 0.000 (0.012)	Loss 1.7991 (1.8583)	Prec@1 29.102 (29.616)	Prec@5 83.398 (82.676)	Acc 0.296 (0.238)	
+2022-03-31 16:05:54,161 - INFO - TRAINING - Epoch: [0][360/781]	Time 0.112 (0.116)	Data 0.000 (0.011)	Loss 1.4845 (1.8513)	Prec@1 40.625 (29.892)	Prec@5 94.727 (82.890)	Acc 0.299 (0.239)	
+2022-03-31 16:05:55,211 - INFO - TRAINING - Epoch: [0][370/781]	Time 0.091 (0.116)	Data 0.000 (0.011)	Loss 1.5809 (1.8450)	Prec@1 42.773 (30.161)	Prec@5 88.867 (83.071)	Acc 0.302 (0.241)	
+2022-03-31 16:05:56,235 - INFO - TRAINING - Epoch: [0][380/781]	Time 0.092 (0.116)	Data 0.000 (0.011)	Loss 1.4234 (1.8381)	Prec@1 45.898 (30.458)	Prec@5 95.898 (83.260)	Acc 0.305 (0.242)	
+2022-03-31 16:05:57,282 - INFO - TRAINING - Epoch: [0][390/781]	Time 0.103 (0.115)	Data 0.000 (0.010)	Loss 1.6018 (1.8315)	Prec@1 39.062 (30.726)	Prec@5 92.578 (83.448)	Acc 0.307 (0.244)	
+2022-03-31 16:05:58,313 - INFO - TRAINING - Epoch: [0][400/781]	Time 0.103 (0.115)	Data 0.000 (0.010)	Loss 1.5867 (1.8261)	Prec@1 38.867 (30.989)	Prec@5 92.578 (83.598)	Acc 0.310 (0.246)	
+2022-03-31 16:05:59,363 - INFO - TRAINING - Epoch: [0][410/781]	Time 0.105 (0.115)	Data 0.000 (0.010)	Loss 1.5949 (1.8210)	Prec@1 37.891 (31.188)	Prec@5 93.555 (83.746)	Acc 0.312 (0.247)	
+2022-03-31 16:06:00,487 - INFO - TRAINING - Epoch: [0][420/781]	Time 0.114 (0.115)	Data 0.000 (0.010)	Loss 1.6105 (1.8159)	Prec@1 34.766 (31.419)	Prec@5 94.727 (83.898)	Acc 0.314 (0.249)	
+2022-03-31 16:06:01,460 - INFO - TRAINING - Epoch: [0][430/781]	Time 0.091 (0.114)	Data 0.000 (0.010)	Loss 1.5011 (1.8100)	Prec@1 42.578 (31.665)	Prec@5 97.266 (84.051)	Acc 0.317 (0.250)	
+2022-03-31 16:06:02,486 - INFO - TRAINING - Epoch: [0][440/781]	Time 0.106 (0.114)	Data 0.000 (0.009)	Loss 1.7043 (1.8030)	Prec@1 40.820 (31.963)	Prec@5 90.625 (84.229)	Acc 0.320 (0.252)	
+2022-03-31 16:06:03,609 - INFO - TRAINING - Epoch: [0][450/781]	Time 0.138 (0.114)	Data 0.000 (0.009)	Loss 1.5725 (1.7980)	Prec@1 41.992 (32.165)	Prec@5 87.695 (84.375)	Acc 0.322 (0.254)	
+2022-03-31 16:06:04,676 - INFO - TRAINING - Epoch: [0][460/781]	Time 0.091 (0.114)	Data 0.000 (0.009)	Loss 1.6671 (1.7935)	Prec@1 41.406 (32.376)	Prec@5 89.258 (84.486)	Acc 0.324 (0.255)	
+2022-03-31 16:06:05,776 - INFO - TRAINING - Epoch: [0][470/781]	Time 0.105 (0.114)	Data 0.000 (0.009)	Loss 1.6797 (1.7873)	Prec@1 40.234 (32.635)	Prec@5 88.281 (84.629)	Acc 0.326 (0.256)	
+2022-03-31 16:06:06,744 - INFO - TRAINING - Epoch: [0][480/781]	Time 0.092 (0.113)	Data 0.000 (0.009)	Loss 1.4716 (1.7826)	Prec@1 42.969 (32.819)	Prec@5 90.430 (84.749)	Acc 0.328 (0.258)	

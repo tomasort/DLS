@@ -1,0 +1,24 @@
+2022-03-31 05:06:17,409 - INFO - saving to /scratch/tor213/DLS/question4/Hoffer/results/2022-03-31_05-06-17_resnet44_m-1
+2022-03-31 05:06:17,411 - DEBUG - run arguments: Namespace(adapt_grad_norm=None, autoaugment=False, batch_size=512, chunk_batch=1, config_file=None, cutmix=None, cutout=False, dataset='cifar10', datasets_dir='~/Datasets', device='cuda', device_ids=[0], dist_backend='nccl', dist_init='env://', distributed=False, drop_optim_state=False, dtype='float', duplicates=1, epochs=100, eval_batch_size=-1, evaluate=None, grad_clip=-1, input_size=None, label_smoothing=0, local_rank=-1, loss_scale=1, lr=0.1, mixup=None, model='resnet', model_config='', momentum=0.9, optimizer='SGD', print_freq=10, results_dir='/scratch/tor213/DLS/question4/Hoffer/results/', resume='', save='2022-03-31_05-06-17', save_all=False, seed=123, start_epoch=-1, sync_bn=False, tensorwatch=False, tensorwatch_port=0, weight_decay=0, workers=8, world_size=-1)
+2022-03-31 05:06:17,411 - INFO - creating model resnet
+2022-03-31 05:06:17,462 - INFO - created model with configuration: {'dataset': 'cifar10'}
+2022-03-31 05:06:17,463 - INFO - number of parameters: 661338
+2022-03-31 05:06:22,884 - INFO - optimization regime: [{'epoch': 0, 'optimizer': 'SGD', 'lr': 0.1, 'momentum': 0.9, 'regularizer': {'name': 'WeightDecay', 'value': 0.0001, 'log': False, 'filter': {'parameter_name': <function weight_decay_config.<locals>.<lambda> at 0x14600e53b940>, 'module': <function weight_decay_config.<locals>.<lambda> at 0x14600e53ba60>}}}, {'epoch': 81, 'lr': 0.01}, {'epoch': 122, 'lr': 0.001}, {'epoch': 164, 'lr': 0.0001}]
+2022-03-31 05:06:22,884 - INFO - data regime: Current: {'datasets_path': '~/Datasets', 'name': 'cifar10', 'split': 'train', 'augment': True, 'input_size': None, 'batch_size': 512, 'shuffle': True, 'num_workers': 8, 'pin_memory': True, 'drop_last': True, 'distributed': False, 'duplicates': 1, 'autoaugment': False, 'cutout': None}
+ Regime:None
+2022-03-31 05:06:22,884 - INFO - 
+Starting Epoch: 1
+
+2022-03-31 05:06:24,622 - DEBUG - OPTIMIZER - setting lr = 0.1
+2022-03-31 05:06:24,623 - DEBUG - OPTIMIZER - setting momentum = 0.9
+2022-03-31 05:06:25,067 - INFO - TRAINING - Epoch: [0][0/97]	Time 2.182 (2.182)	Data 1.737 (1.737)	Loss 2.3050 (2.3050)	Prec@1 9.766 (9.766)	Prec@5 48.633 (48.633)	Acc 0.098 (0.098)	
+2022-03-31 05:06:25,810 - INFO - TRAINING - Epoch: [0][10/97]	Time 0.072 (0.266)	Data 0.000 (0.158)	Loss 2.2193 (2.2733)	Prec@1 19.727 (15.874)	Prec@5 70.703 (60.263)	Acc 0.159 (0.141)	
+2022-03-31 05:06:26,534 - INFO - TRAINING - Epoch: [0][20/97]	Time 0.072 (0.174)	Data 0.000 (0.083)	Loss 2.0908 (2.2110)	Prec@1 24.219 (18.220)	Prec@5 73.047 (65.811)	Acc 0.182 (0.156)	
+2022-03-31 05:06:27,258 - INFO - TRAINING - Epoch: [0][30/97]	Time 0.072 (0.141)	Data 0.000 (0.056)	Loss 1.9571 (2.1475)	Prec@1 25.000 (20.331)	Prec@5 81.445 (69.790)	Acc 0.203 (0.169)	
+2022-03-31 05:06:27,982 - INFO - TRAINING - Epoch: [0][40/97]	Time 0.072 (0.124)	Data 0.000 (0.043)	Loss 1.9751 (2.1054)	Prec@1 25.195 (21.784)	Prec@5 80.469 (72.256)	Acc 0.218 (0.179)	
+2022-03-31 05:06:28,707 - INFO - TRAINING - Epoch: [0][50/97]	Time 0.073 (0.114)	Data 0.000 (0.034)	Loss 1.8691 (2.0669)	Prec@1 27.734 (22.986)	Prec@5 84.375 (74.265)	Acc 0.230 (0.188)	
+2022-03-31 05:06:29,431 - INFO - TRAINING - Epoch: [0][60/97]	Time 0.072 (0.107)	Data 0.000 (0.029)	Loss 1.8490 (2.0316)	Prec@1 28.906 (24.123)	Prec@5 84.180 (75.884)	Acc 0.241 (0.196)	
+2022-03-31 05:06:30,156 - INFO - TRAINING - Epoch: [0][70/97]	Time 0.072 (0.102)	Data 0.000 (0.025)	Loss 1.7974 (2.0023)	Prec@1 31.445 (24.986)	Prec@5 86.914 (77.236)	Acc 0.250 (0.203)	
+2022-03-31 05:06:30,880 - INFO - TRAINING - Epoch: [0][80/97]	Time 0.072 (0.099)	Data 0.000 (0.022)	Loss 1.7190 (1.9733)	Prec@1 36.719 (25.803)	Prec@5 88.867 (78.441)	Acc 0.258 (0.209)	
+2022-03-31 05:06:31,603 - INFO - TRAINING - Epoch: [0][90/97]	Time 0.072 (0.096)	Data 0.000 (0.019)	Loss 1.7530 (1.9476)	Prec@1 28.320 (26.552)	Prec@5 88.086 (79.436)	Acc 0.266 (0.215)	
+2022-03-31 05:06:32,040 - INFO - TRAINING - Epoch: [0][96/97]	Time 0.072 (0.094)	Data 0.000 (0.018)	Loss 1.7297 (1.9339)	Prec@1 34.766 (26.923)	Prec@5 87.109 (79.981)	Acc 0.269 (0.218)	

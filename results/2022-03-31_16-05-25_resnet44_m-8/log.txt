@@ -1,0 +1,16 @@
+2022-03-31 16:05:25,095 - INFO - saving to results/2022-03-31_16-05-25_resnet44_m-8
+2022-03-31 16:05:25,097 - DEBUG - run arguments: Namespace(adapt_grad_norm=None, autoaugment=False, batch_size=64, chunk_batch=1, config_file=None, cutmix=None, cutout=True, dataset='cifar10', datasets_dir='~/Datasets', device='cuda', device_ids=[0], dist_backend='nccl', dist_init='env://', distributed=False, drop_optim_state=False, dtype='float', duplicates=8, epochs=100, eval_batch_size=-1, evaluate=None, grad_clip=-1, input_size=None, label_smoothing=0, local_rank=-1, loss_scale=1, lr=0.1, mixup=None, model='resnet', model_config="{'depth': 44}", momentum=0.9, optimizer='SGD', print_freq=10, results_dir='results/', resume='', save='2022-03-31_16-05-25', save_all=False, seed=123, start_epoch=-1, sync_bn=False, tensorwatch=False, tensorwatch_port=0, weight_decay=0, workers=8, world_size=-1)
+2022-03-31 16:05:25,097 - INFO - creating model resnet
+2022-03-31 16:05:25,141 - INFO - created model with configuration: {'dataset': 'cifar10', 'depth': 44}
+2022-03-31 16:05:25,142 - INFO - number of parameters: 661338
+2022-03-31 16:05:30,177 - INFO - optimization regime: [{'epoch': 0, 'optimizer': 'SGD', 'lr': 0.1, 'momentum': 0.9, 'regularizer': {'name': 'WeightDecay', 'value': 0.0001, 'log': False, 'filter': {'parameter_name': <function weight_decay_config.<locals>.<lambda> at 0x1479120dca60>, 'module': <function weight_decay_config.<locals>.<lambda> at 0x1479120dc820>}}}, {'epoch': 81, 'lr': 0.01}, {'epoch': 122, 'lr': 0.001}, {'epoch': 164, 'lr': 0.0001}]
+2022-03-31 16:05:30,180 - INFO - data regime: Current: {'datasets_path': '~/Datasets', 'name': 'cifar10', 'split': 'train', 'augment': True, 'input_size': None, 'batch_size': 64, 'shuffle': True, 'num_workers': 8, 'pin_memory': True, 'drop_last': True, 'distributed': False, 'duplicates': 8, 'autoaugment': False, 'cutout': {'holes': 1, 'length': 16}}
+ Regime:None
+2022-03-31 16:05:30,180 - INFO - 
+Starting Epoch: 1
+
+2022-03-31 16:05:33,871 - DEBUG - OPTIMIZER - setting lr = 0.1
+2022-03-31 16:05:33,871 - DEBUG - OPTIMIZER - setting momentum = 0.9
+2022-03-31 16:05:34,643 - INFO - TRAINING - Epoch: [0][0/781]	Time 4.463 (4.463)	Data 3.690 (3.690)	Loss 2.3068 (2.3068)	Prec@1 7.031 (7.031)	Prec@5 42.383 (42.383)	Acc 0.070 (0.070)	
+2022-03-31 16:05:35,729 - INFO - TRAINING - Epoch: [0][10/781]	Time 0.092 (0.504)	Data 0.000 (0.337)	Loss 2.3304 (2.3035)	Prec@1 11.328 (13.903)	Prec@5 53.516 (55.273)	Acc 0.139 (0.121)	
+2022-03-31 16:05:36,812 - INFO - TRAINING - Epoch: [0][20/781]	Time 0.129 (0.316)	Data 0.009 (0.178)	Loss 2.2553 (2.2595)	Prec@1 9.961 (15.597)	Prec@5 63.867 (59.552)	Acc 0.156 (0.137)	
