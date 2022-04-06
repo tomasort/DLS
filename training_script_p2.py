@@ -307,7 +307,7 @@ torch.manual_seed(0)
 max_batch_size = 2**15
 print(f"Starting training with {torch.cuda.device_count()} GPUs")
 b = 32  # Initial batch size
-num_epochs = 1  # The first epoch is to bring things to the cache and stuff
+num_epochs = 2  # The first epoch is to bring things to the cache and stuff
 df_columns = ['gpu_num', 'batch_size', 'train_step','train_data','train_loss','train_acc','test_step','test_data','test_loss','test_acc','total_train_step_time','total_train_data_time','total_test_step_time','total_test_data_time']
 results = pd.DataFrame(columns=df_columns)
 while b < max_batch_size:
