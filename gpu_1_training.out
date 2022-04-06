@@ -1,0 +1,174 @@
+Files already downloaded and verified
+Files already downloaded and verified
+Starting training with 1 GPUs
+Training with batch size: 32 and 1 GPUs
+Start Training gpu_1_batch_size_32
+Epoch #1
+TRAINING - Epoch: [1][0/1563]	Time 2.019 (2.0188)	Data 1.568 (1.5683)	Loss 2.2921 (2.2921)	Acc 0.188 (0.188)	
+TRAINING - Epoch: [1][100/1563]	Time 0.009 (0.0278)	Data 0.001 (0.0164)	Loss 1.6352 (1.9761)	Acc 0.267 (0.206)	
+TRAINING - Epoch: [1][200/1563]	Time 0.009 (0.0187)	Data 0.001 (0.0087)	Loss 1.6449 (1.8289)	Acc 0.325 (0.254)	
+TRAINING - Epoch: [1][300/1563]	Time 0.010 (0.0156)	Data 0.001 (0.0061)	Loss 1.3630 (1.7410)	Acc 0.355 (0.283)	
+TRAINING - Epoch: [1][400/1563]	Time 0.007 (0.0138)	Data 0.001 (0.0048)	Loss 1.4871 (1.6761)	Acc 0.381 (0.304)	
+TRAINING - Epoch: [1][500/1563]	Time 0.007 (0.0124)	Data 0.001 (0.0040)	Loss 1.3911 (1.6137)	Acc 0.405 (0.322)	
+TRAINING - Epoch: [1][600/1563]	Time 0.010 (0.0119)	Data 0.001 (0.0035)	Loss 1.1941 (1.5664)	Acc 0.423 (0.337)	
+TRAINING - Epoch: [1][700/1563]	Time 0.009 (0.0115)	Data 0.001 (0.0031)	Loss 1.2241 (1.5242)	Acc 0.440 (0.351)	
+TRAINING - Epoch: [1][800/1563]	Time 0.007 (0.0111)	Data 0.001 (0.0029)	Loss 1.3574 (1.4848)	Acc 0.454 (0.363)	
+TRAINING - Epoch: [1][900/1563]	Time 0.006 (0.0106)	Data 0.001 (0.0026)	Loss 1.2277 (1.4458)	Acc 0.470 (0.374)	
+TRAINING - Epoch: [1][1000/1563]	Time 0.007 (0.0103)	Data 0.001 (0.0025)	Loss 1.1659 (1.4146)	Acc 0.482 (0.384)	
+TRAINING - Epoch: [1][1100/1563]	Time 0.011 (0.0099)	Data 0.001 (0.0023)	Loss 1.3774 (1.3841)	Acc 0.495 (0.394)	
+TRAINING - Epoch: [1][1200/1563]	Time 0.008 (0.0099)	Data 0.001 (0.0022)	Loss 1.3652 (1.3574)	Acc 0.505 (0.402)	
+TRAINING - Epoch: [1][1300/1563]	Time 0.009 (0.0098)	Data 0.001 (0.0021)	Loss 0.9252 (1.3325)	Acc 0.516 (0.411)	
+TRAINING - Epoch: [1][1400/1563]	Time 0.007 (0.0097)	Data 0.001 (0.0020)	Loss 1.1523 (1.3087)	Acc 0.524 (0.419)	
+TRAINING - Epoch: [1][1500/1563]	Time 0.010 (0.0095)	Data 0.001 (0.0020)	Loss 0.8132 (1.2874)	Acc 0.533 (0.426)	
+TRAINING - Epoch: [1][1562/1563]	Time 0.903 (0.0101)	Data 0.001 (0.0019)	Loss 0.7377 (1.2753)	Acc 0.538 (0.430)	
+EVALUATING - Epoch: [1][0/100]	Time 0.680 (0.680)	Data 0.668 (0.668)	Loss 0.8978 (0.8978)	Acc 0.650 (0.650)	
+EVALUATING - Epoch: [1][99/100]	Time 0.013 (0.022)	Data 0.001 (0.010)	Loss 0.9305 (0.9199)	Acc 0.674 (0.675)	
+Accuracy of the network on the 10000 test images: 67%
+
+Results - Epoch: 1
+Training Loss 1.2753 	Training Accuracy 0.4302 	Training Step Time  15.7924 	Training Data Time  2.9928 	Validation Loss 0.9199 	Validation Accuracy 0.6751 
+
+Epoch #2
+TRAINING - Epoch: [2][0/1563]	Time 0.642 (0.6415)	Data 0.628 (0.6281)	Loss 1.1953 (1.1953)	Acc 0.656 (0.656)	
+TRAINING - Epoch: [2][100/1563]	Time 0.007 (0.0137)	Data 0.001 (0.0078)	Loss 0.7294 (0.8594)	Acc 0.705 (0.703)	
+TRAINING - Epoch: [2][200/1563]	Time 0.012 (0.0111)	Data 0.001 (0.0044)	Loss 1.0567 (0.8541)	Acc 0.699 (0.703)	
+TRAINING - Epoch: [2][300/1563]	Time 0.011 (0.0111)	Data 0.001 (0.0032)	Loss 0.8416 (0.8390)	Acc 0.706 (0.704)	
+TRAINING - Epoch: [2][400/1563]	Time 0.012 (0.0111)	Data 0.001 (0.0027)	Loss 0.8490 (0.8373)	Acc 0.707 (0.704)	
+TRAINING - Epoch: [2][500/1563]	Time 0.010 (0.0110)	Data 0.001 (0.0023)	Loss 0.9770 (0.8310)	Acc 0.708 (0.705)	
+TRAINING - Epoch: [2][600/1563]	Time 0.010 (0.0108)	Data 0.001 (0.0021)	Loss 0.5416 (0.8237)	Acc 0.710 (0.706)	
+TRAINING - Epoch: [2][700/1563]	Time 0.007 (0.0104)	Data 0.001 (0.0019)	Loss 0.8691 (0.8184)	Acc 0.712 (0.707)	
+TRAINING - Epoch: [2][800/1563]	Time 0.007 (0.0099)	Data 0.001 (0.0018)	Loss 0.7179 (0.8121)	Acc 0.713 (0.707)	
+TRAINING - Epoch: [2][900/1563]	Time 0.010 (0.0098)	Data 0.001 (0.0017)	Loss 1.2255 (0.8126)	Acc 0.712 (0.708)	
+TRAINING - Epoch: [2][1000/1563]	Time 0.010 (0.0098)	Data 0.001 (0.0016)	Loss 0.6352 (0.8049)	Acc 0.715 (0.708)	
+TRAINING - Epoch: [2][1100/1563]	Time 0.011 (0.0098)	Data 0.001 (0.0015)	Loss 1.2464 (0.7996)	Acc 0.717 (0.709)	
+TRAINING - Epoch: [2][1200/1563]	Time 0.011 (0.0097)	Data 0.001 (0.0015)	Loss 0.7298 (0.7908)	Acc 0.720 (0.710)	
+TRAINING - Epoch: [2][1300/1563]	Time 0.010 (0.0098)	Data 0.001 (0.0015)	Loss 0.9336 (0.7870)	Acc 0.721 (0.711)	
+TRAINING - Epoch: [2][1400/1563]	Time 0.011 (0.0098)	Data 0.001 (0.0014)	Loss 0.5797 (0.7801)	Acc 0.724 (0.712)	
+TRAINING - Epoch: [2][1500/1563]	Time 0.009 (0.0098)	Data 0.001 (0.0014)	Loss 0.5397 (0.7769)	Acc 0.725 (0.712)	
+TRAINING - Epoch: [2][1562/1563]	Time 0.012 (0.0098)	Data 0.001 (0.0014)	Loss 0.9535 (0.7750)	Acc 0.726 (0.713)	
+EVALUATING - Epoch: [2][0/100]	Time 0.663 (0.663)	Data 0.651 (0.651)	Loss 0.6762 (0.6762)	Acc 0.750 (0.750)	
+EVALUATING - Epoch: [2][99/100]	Time 0.012 (0.022)	Data 0.001 (0.010)	Loss 0.7282 (0.7125)	Acc 0.749 (0.746)	
+Accuracy of the network on the 10000 test images: 74%
+
+Results - Epoch: 2
+Training Loss 0.7750 	Training Accuracy 0.7130 	Training Step Time  15.2896 	Training Data Time  2.1251 	Validation Loss 0.7125 	Validation Accuracy 0.7463 
+
+Finished Training gpu_1_batch_size_32
+
+Training with batch size: 128 and 1 GPUs
+Start Training gpu_1_batch_size_128
+Epoch #1
+training_script_p2.py:328: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  results = results.append(results_from_second_epoch, ignore_index=True)
+TRAINING - Epoch: [1][0/391]	Time 1.625 (1.6249)	Data 0.656 (0.6560)	Loss 2.4283 (2.4283)	Acc 0.102 (0.102)	
+TRAINING - Epoch: [1][100/391]	Time 0.008 (0.0280)	Data 0.002 (0.0079)	Loss 1.6561 (1.9042)	Acc 0.296 (0.218)	
+TRAINING - Epoch: [1][200/391]	Time 0.008 (0.0178)	Data 0.002 (0.0048)	Loss 1.5027 (1.7141)	Acc 0.365 (0.276)	
+TRAINING - Epoch: [1][300/391]	Time 0.007 (0.0144)	Data 0.002 (0.0037)	Loss 1.2911 (1.5989)	Acc 0.407 (0.313)	
+TRAINING - Epoch: [1][390/391]	Time 0.014 (0.0128)	Data 0.002 (0.0032)	Loss 1.1937 (1.5206)	Acc 0.438 (0.338)	
+EVALUATING - Epoch: [1][0/100]	Time 0.561 (0.561)	Data 0.540 (0.540)	Loss 1.1558 (1.1558)	Acc 0.540 (0.540)	
+EVALUATING - Epoch: [1][99/100]	Time 0.013 (0.022)	Data 0.001 (0.010)	Loss 1.3545 (1.2074)	Acc 0.559 (0.563)	
+Accuracy of the network on the 10000 test images: 55%
+
+Results - Epoch: 1
+Training Loss 1.5206 	Training Accuracy 0.3383 	Training Step Time  5.0202 	Training Data Time  1.2513 	Validation Loss 1.2074 	Validation Accuracy 0.5629 
+
+Epoch #2
+TRAINING - Epoch: [2][0/391]	Time 0.487 (0.4871)	Data 0.478 (0.4785)	Loss 1.2516 (1.2516)	Acc 0.570 (0.570)	
+TRAINING - Epoch: [2][100/391]	Time 0.009 (0.0151)	Data 0.001 (0.0083)	Loss 1.1808 (1.1274)	Acc 0.596 (0.590)	
+TRAINING - Epoch: [2][200/391]	Time 0.008 (0.0136)	Data 0.002 (0.0049)	Loss 1.0286 (1.1048)	Acc 0.604 (0.595)	
+TRAINING - Epoch: [2][300/391]	Time 0.007 (0.0116)	Data 0.001 (0.0038)	Loss 0.9028 (1.0698)	Acc 0.615 (0.600)	
+TRAINING - Epoch: [2][390/391]	Time 0.013 (0.0107)	Data 0.001 (0.0033)	Loss 0.9911 (1.0452)	Acc 0.625 (0.604)	
+EVALUATING - Epoch: [2][0/100]	Time 0.676 (0.676)	Data 0.664 (0.664)	Loss 0.9365 (0.9365)	Acc 0.690 (0.690)	
+EVALUATING - Epoch: [2][99/100]	Time 0.013 (0.022)	Data 0.001 (0.010)	Loss 1.0097 (0.9774)	Acc 0.652 (0.661)	
+Accuracy of the network on the 10000 test images: 65%
+
+Results - Epoch: 2
+Training Loss 1.0452 	Training Accuracy 0.6044 	Training Step Time  4.1898 	Training Data Time  1.2779 	Validation Loss 0.9774 	Validation Accuracy 0.6615 
+
+Finished Training gpu_1_batch_size_128
+
+Training with batch size: 512 and 1 GPUs
+Start Training gpu_1_batch_size_512
+Epoch #1
+training_script_p2.py:328: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  results = results.append(results_from_second_epoch, ignore_index=True)
+TRAINING - Epoch: [1][0/98]	Time 1.368 (1.3680)	Data 0.707 (0.7070)	Loss 2.3532 (2.3532)	Acc 0.123 (0.123)	
+TRAINING - Epoch: [1][97/98]	Time 0.016 (0.0291)	Data 0.003 (0.0109)	Loss 1.5619 (1.8694)	Acc 0.312 (0.227)	
+EVALUATING - Epoch: [1][0/100]	Time 0.663 (0.663)	Data 0.643 (0.643)	Loss 1.5399 (1.5399)	Acc 0.430 (0.430)	
+EVALUATING - Epoch: [1][99/100]	Time 0.013 (0.021)	Data 0.001 (0.009)	Loss 1.6044 (1.5609)	Acc 0.427 (0.427)	
+Accuracy of the network on the 10000 test images: 42%
+
+Results - Epoch: 1
+Training Loss 1.8694 	Training Accuracy 0.2272 	Training Step Time  2.8542 	Training Data Time  1.0657 	Validation Loss 1.5609 	Validation Accuracy 0.4275 
+
+Epoch #2
+TRAINING - Epoch: [2][0/98]	Time 0.710 (0.7098)	Data 0.701 (0.7009)	Loss 1.5032 (1.5032)	Acc 0.465 (0.465)	
+TRAINING - Epoch: [2][97/98]	Time 0.014 (0.0173)	Data 0.003 (0.0108)	Loss 1.3016 (1.4249)	Acc 0.477 (0.460)	
+EVALUATING - Epoch: [2][0/100]	Time 0.700 (0.700)	Data 0.688 (0.688)	Loss 1.3147 (1.3147)	Acc 0.500 (0.500)	
+EVALUATING - Epoch: [2][99/100]	Time 0.013 (0.022)	Data 0.001 (0.010)	Loss 1.4298 (1.3440)	Acc 0.506 (0.505)	
+Accuracy of the network on the 10000 test images: 50%
+
+Results - Epoch: 2
+Training Loss 1.4249 	Training Accuracy 0.4596 	Training Step Time  1.6909 	Training Data Time  1.0599 	Validation Loss 1.3440 	Validation Accuracy 0.5054 
+
+Finished Training gpu_1_batch_size_512
+
+Training with batch size: 2048 and 1 GPUs
+Start Training gpu_1_batch_size_2048
+Epoch #1
+training_script_p2.py:328: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  results = results.append(results_from_second_epoch, ignore_index=True)
+TRAINING - Epoch: [1][0/25]	Time 1.831 (1.8312)	Data 1.133 (1.1332)	Loss 2.4801 (2.4801)	Acc 0.108 (0.108)	
+TRAINING - Epoch: [1][24/25]	Time 0.078 (0.3128)	Data 0.013 (0.0565)	Loss 2.0067 (2.2288)	Acc 0.182 (0.142)	
+EVALUATING - Epoch: [1][0/100]	Time 0.600 (0.600)	Data 0.588 (0.588)	Loss 1.9242 (1.9242)	Acc 0.290 (0.290)	
+EVALUATING - Epoch: [1][99/100]	Time 0.013 (0.022)	Data 0.001 (0.010)	Loss 1.9942 (2.0081)	Acc 0.270 (0.268)	
+Accuracy of the network on the 10000 test images: 26%
+
+Results - Epoch: 1
+Training Loss 2.2288 	Training Accuracy 0.1421 	Training Step Time  7.8200 	Training Data Time  1.4116 	Validation Loss 2.0081 	Validation Accuracy 0.2680 
+
+Epoch #2
+TRAINING - Epoch: [2][0/25]	Time 1.375 (1.3749)	Data 1.130 (1.1296)	Loss 2.0059 (2.0059)	Acc 0.284 (0.284)	
+TRAINING - Epoch: [2][24/25]	Time 0.019 (0.2920)	Data 0.007 (0.0559)	Loss 1.7530 (1.8801)	Acc 0.309 (0.288)	
+EVALUATING - Epoch: [2][0/100]	Time 0.634 (0.634)	Data 0.614 (0.614)	Loss 1.7057 (1.7057)	Acc 0.420 (0.420)	
+EVALUATING - Epoch: [2][99/100]	Time 0.013 (0.023)	Data 0.001 (0.010)	Loss 1.7789 (1.7782)	Acc 0.349 (0.353)	
+Accuracy of the network on the 10000 test images: 34%
+
+Results - Epoch: 2
+Training Loss 1.8801 	Training Accuracy 0.2875 	Training Step Time  7.2997 	Training Data Time  1.3981 	Validation Loss 1.7782 	Validation Accuracy 0.3529 
+
+Finished Training gpu_1_batch_size_2048
+
+Training with batch size: 8192 and 1 GPUs
+Start Training gpu_1_batch_size_8192
+Epoch #1
+training_script_p2.py:328: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  results = results.append(results_from_second_epoch, ignore_index=True)
+TRAINING - Epoch: [1][0/7]	Time 7.743 (7.7432)	Data 2.181 (2.1807)	Loss 2.4420 (2.4420)	Acc 0.089 (0.089)	
+TRAINING - Epoch: [1][6/7]	Time 0.029 (1.1474)	Data 0.016 (0.3415)	Loss 2.2821 (2.3845)	Acc 0.099 (0.092)	
+EVALUATING - Epoch: [1][0/100]	Time 0.621 (0.621)	Data 0.596 (0.596)	Loss 2.2462 (2.2462)	Acc 0.140 (0.140)	
+EVALUATING - Epoch: [1][99/100]	Time 0.013 (0.022)	Data 0.001 (0.010)	Loss 2.2915 (2.2674)	Acc 0.167 (0.165)	
+Accuracy of the network on the 10000 test images: 16%
+
+Results - Epoch: 1
+Training Loss 2.3845 	Training Accuracy 0.0921 	Training Step Time  8.0316 	Training Data Time  2.3903 	Validation Loss 2.2674 	Validation Accuracy 0.1653 
+
+Epoch #2
+TRAINING - Epoch: [2][0/7]	Time 2.214 (2.2143)	Data 2.199 (2.1987)	Loss 2.2688 (2.2688)	Acc 0.170 (0.170)	
+TRAINING - Epoch: [2][6/7]	Time 0.029 (0.3570)	Data 0.016 (0.3445)	Loss 2.1922 (2.2283)	Acc 0.183 (0.177)	
+EVALUATING - Epoch: [2][0/100]	Time 0.841 (0.841)	Data 0.827 (0.827)	Loss 2.1892 (2.1892)	Acc 0.210 (0.210)	
+EVALUATING - Epoch: [2][99/100]	Time 0.013 (0.023)	Data 0.001 (0.011)	Loss 2.1542 (2.1819)	Acc 0.198 (0.194)	
+Accuracy of the network on the 10000 test images: 19%
+
+Results - Epoch: 2
+Training Loss 2.2283 	Training Accuracy 0.1771 	Training Step Time  2.4990 	Training Data Time  2.4113 	Validation Loss 2.1819 	Validation Accuracy 0.1938 
+
+Finished Training gpu_1_batch_size_8192
+
+Training with batch size: 32768 and 1 GPUs
+Start Training gpu_1_batch_size_32768
+Epoch #1
+training_script_p2.py:328: FutureWarning: The frame.append method is deprecated and will be removed from pandas in a future version. Use pandas.concat instead.
+  results = results.append(results_from_second_epoch, ignore_index=True)
+LIMIT REACHED: The limit for 1 GPU(s) is: batch_size=8,192 with an effective batch of 8,192
+Now we know that the limit for 1 GPU(s) is: batch_size=8,192 with an effective batch of 8,192
