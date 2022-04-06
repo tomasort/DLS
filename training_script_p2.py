@@ -2,7 +2,7 @@ import torch
 import logging
 import torchvision
 import torchvision.transforms as transforms
-import pandas
+import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import torch.nn as nn
@@ -19,12 +19,15 @@ transform = transforms.Compose(
     [transforms.ToTensor(),
      transforms.Normalize((0.5, 0.5, 0.5), (0.5, 0.5, 0.5))])
 
+
+path = "/scratch/tor213/"
+
 classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
-trainset = torchvision.datasets.CIFAR10(root='/scratch/tor213/data', train=True,
+trainset = torchvision.datasets.CIFAR10(root=path + 'data', train=True,
                                     download=True, transform=transform)
-testset = torchvision.datasets.CIFAR10(root='/scratch/tor213/data', train=False,
+testset = torchvision.datasets.CIFAR10(root=path + 'data', train=False,
                                     download=True, transform=transform)
 
 class AverageMeter(object):
@@ -81,7 +84,7 @@ def test_network(net, criterion, testloader, epoch=None, showimages=False, print
                              'Loss {meters[loss].val:.4f} ({meters[loss].avg:.4f})\t'
                              'Acc {meters[acc].val:.3f} ({meters[acc].avg:.3f})\t'
                              .format(
-                                 epoch, i, len(testloader),
+                                 epoch + 1, i, len(testloader),
                                  phase='EVALUATING',
                                  meters=meters)) 
                 print(report)
@@ -101,12 +104,12 @@ def test_network(net, criterion, testloader, epoch=None, showimages=False, print
     return meters
 
 def train(net, optimizer, trainloader, testloader, epochs=1, criterion=nn.CrossEntropyLoss(), lr=0.001, momentum=0.9, print_freq=100, name=''):
-    df_columns = ["train_"+x for x in ["step", "data", "loss", "acc"]] + ["test_"+x for x in ["step", "data", "loss", "acc" ]]
-    df_columns += ["total_train_step_time", "total_train_data_time", "total_test_step_time", "total_test_data_time"]
-    results_df = pandas.DataFrame(columns=df_columns)
+    df_columns = ['train_step','train_data','train_loss','train_acc','test_step','test_data','test_loss','test_acc','total_train_step_time','total_train_data_time','total_test_step_time','total_test_data_time']
+    results_df = pd.DataFrame(columns=df_columns)
     time_stamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
     print(f"Start Training {name}")
     for epoch in range(epochs):  # loop over the dataset multiple times
+        print(f"Epoch #{epoch + 1}")
         meters = {name: AverageMeter() for name in ['step', 'data', 'loss', 'acc']}
         correct = 0.
         total = 0.
@@ -168,10 +171,10 @@ def train(net, optimizer, trainloader, testloader, epochs=1, criterion=nn.CrossE
         epoch["total_train_data_time"] = meters["data"].sum
         epoch["total_test_step_time"] = test_meters["step"].sum
         epoch["total_test_data_time"] = test_meters["data"].sum
-        results_df = results_df.append(epoch, ignore_index=True)
+        results_df.loc[len(results_df)] = [v for _, v in epoch.items()]
         
     print(f'Finished Training {name}\n')
-    results_df.to_csv(f"/scratch/tor213/DLS/{name}.csv", index=False)
+    results_df.to_csv(f"{path}{name}.csv", index=False)
     return results_df
 
 
@@ -263,7 +266,6 @@ class Bottleneck(nn.Module):
 class ResNet(nn.Module):
     def __init__(self, block, num_blocks, num_classes=10):
         super(ResNet, self).__init__()
-        self.first=True
         self.in_planes = 64
 
         self.conv1 = nn.Conv2d(3, 64, kernel_size=3,
@@ -293,10 +295,6 @@ class ResNet(nn.Module):
         out = F.avg_pool2d(out, 4)
         out = out.view(out.size(0), -1)
         out = self.linear(out)
-        if self.first:
-            print("\tIn Model: input size", input.size(),
-                  "output size", out.size())
-            self.first = False
         return out
 
 
@@ -304,11 +302,14 @@ def ResNet18():
     return ResNet(BasicBlock, [2, 2, 2, 2])
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+torch.manual_seed(0)
 
-max_batch_size = 4**10  # I think we can set the maximum to 10 iterations
+max_batch_size = 2**15
 print(f"Starting training with {torch.cuda.device_count()} GPUs")
 b = 32  # Initial batch size
-num_epochs = 4  # The first epoch is to bring things to the cache and stuff
+num_epochs = 1  # The first epoch is to bring things to the cache and stuff
+df_columns = ['gpu_num', 'batch_size', 'train_step','train_data','train_loss','train_acc','test_step','test_data','test_loss','test_acc','total_train_step_time','total_train_data_time','total_test_step_time','total_test_data_time']
+results = pd.DataFrame(columns=df_columns)
 while b < max_batch_size:
     try:
         print(f"Training with batch size: {b} and {torch.cuda.device_count()} GPUs")
@@ -320,11 +321,16 @@ while b < max_batch_size:
         trainloader, testloader = get_dataloaders(trainig_batch_size=b*torch.cuda.device_count())  # multiply the batch size times the number of GPUs 
         optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
         train_df = train(net, optimizer, epochs=num_epochs, trainloader=trainloader, testloader=testloader, name=f'gpu_{torch.cuda.device_count()}_batch_size_{b}')
-        print(train_df.iloc[-1])
+        results_from_second_epoch = train_df.iloc[-1].to_dict()
+        results_from_second_epoch['batch_size'] = b
+        results_from_second_epoch['gpu_num'] = torch.cuda.device_count()
+        results = results.append(results_from_second_epoch, ignore_index=True)
     except RuntimeError as e:
-        print(f"LIMIT REACHED: The limit for the ({torch.cuda.device_count()}) GPU(s) is: {b} or an effective batch of {b*torch.cuda.device_count()}")
+        b = b // 4
+        print(f"LIMIT REACHED: The limit for {torch.cuda.device_count()} GPU(s) is: batch_size={b:,} with an effective batch of {b*torch.cuda.device_count():,}")
+        break
+    if b >= max_batch_size:
         break
     b *= 4
-    if b > max_batch_size:
-        break
-print(f"Now we know that the limit for the ({torch.cuda.device_count()}) GPU(s) is: {b}")
+print(f"Now we know that the limit for {torch.cuda.device_count()} GPU(s) is: batch_size={b:,} with an effective batch of {b*torch.cuda.device_count():,}")
+results.to_csv(f"{path}gpu_{torch.cuda.device_count()}_results.csv", index=False)

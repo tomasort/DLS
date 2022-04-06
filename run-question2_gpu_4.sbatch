@@ -4,7 +4,7 @@
 #SBATCH --cpus-per-task=8
 #SBATCH --output=%x.out
 #SBATCH --mem=32GB
-#SBATCH --time=4:00:00
+#SBATCH --time=2:00:00
 #SBATCH --gres=gpu:rtx8000:4
 
 module purge

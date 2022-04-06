@@ -15,4 +15,4 @@ module purge
 source /scratch/tor213/.env/bin/activate
 cd /scratch/tor213/DLS
 
-python test.py
+python test_number_of_gpus
