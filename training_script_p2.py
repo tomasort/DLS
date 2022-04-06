@@ -22,9 +22,9 @@ transform = transforms.Compose(
 classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
-trainset = torchvision.datasets.CIFAR10(root='./data', train=True,
+trainset = torchvision.datasets.CIFAR10(root='/scratch/tor213/data', train=True,
                                     download=True, transform=transform)
-testset = torchvision.datasets.CIFAR10(root='./data', train=False,
+testset = torchvision.datasets.CIFAR10(root='/scratch/tor213/data', train=False,
                                     download=True, transform=transform)
 
 class AverageMeter(object):
@@ -105,9 +105,6 @@ def train(net, optimizer, trainloader, testloader, epochs=1, criterion=nn.CrossE
     df_columns += ["total_train_step_time", "total_train_data_time", "total_test_step_time", "total_test_data_time"]
     results_df = pandas.DataFrame(columns=df_columns)
     time_stamp = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-    logging.basicConfig(filename=f'{name}{"_" if name != "" else ""}{time_stamp}.log')
-    logging.debug('This message should go to the log file')
-    logging.info('So should this')
     print(f"Start Training {name}")
     for epoch in range(epochs):  # loop over the dataset multiple times
         meters = {name: AverageMeter() for name in ['step', 'data', 'loss', 'acc']}
@@ -322,7 +319,7 @@ while b < max_batch_size:
             net = nn.DataParallel(net)
         trainloader, testloader = get_dataloaders(trainig_batch_size=b*torch.cuda.device_count())  # multiply the batch size times the number of GPUs 
         optimizer = optim.SGD(net.parameters(), lr=0.001, momentum=0.9)
-        train_df = train(net, optimizer, epochs=num_epochs, trainloader=trainloader, testloader=testloader, name=f'gpu_{torch.cuda.device_count()}_batch_size_{b*torch.cuda.device_count()}')
+        train_df = train(net, optimizer, epochs=num_epochs, trainloader=trainloader, testloader=testloader, name=f'gpu_{torch.cuda.device_count()}_batch_size_{b}')
         print(train_df.iloc[-1])
     except RuntimeError as e:
         print(f"LIMIT REACHED: The limit for the ({torch.cuda.device_count()}) GPU(s) is: {b} or an effective batch of {b*torch.cuda.device_count()}")
