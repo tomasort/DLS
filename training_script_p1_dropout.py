@@ -248,13 +248,13 @@ def get_optimizer(model, name):
     else:
         return None
 
-epochs = 4
+epochs = 200
 optimizers = ['AdaGrad', 'RMSProp', 'RMSProp+Nesterov', 'AdaDelta', 'Adam'] 
 # Train the network without dropout
-for opt_name in optimizers:
-    print(f"\n\nTraining using optimizer: {opt_name}")
-    net = Net().to(device)
-    train(net, optimizer=get_optimizer(net, opt_name), trainloader=trainloader, testloader=testloader, epochs=epochs, name=f"{opt_name.replace('+', '_')}")
+#for opt_name in optimizers:
+#    print(f"\n\nTraining using optimizer: {opt_name}")
+#    net = Net().to(device)
+#    train(net, optimizer=get_optimizer(net, opt_name), trainloader=trainloader, testloader=testloader, epochs=epochs, name=f"{opt_name.replace('+', '_')}")
 
 # add dropout to the model
 for opt_name in optimizers:

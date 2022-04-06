@@ -11,4 +11,4 @@ module purge
 source /scratch/tor213/.env/bin/activate
 cd /scratch/tor213/DLS
 
-python training_script_p1.py 
+python training_script_p1_dropout.py 
