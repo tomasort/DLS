@@ -21,7 +21,7 @@ transform = transforms.Compose(
 
 
 data_path = "/scratch/tor213/data"
-path = "/scratch/tor213/DLS"
+path = "/scratch/tor213/DLS/"
 
 classes = ('plane', 'car', 'bird', 'cat',
            'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
