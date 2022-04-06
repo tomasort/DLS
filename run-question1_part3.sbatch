@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=problem1
+#SBATCH --job-name=problem1_dropout
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=4
 #SBATCH --output=%x.out
