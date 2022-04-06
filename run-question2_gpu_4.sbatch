@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=gpu_2_training
+#SBATCH --job-name=gpu_4_training
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=8
 #SBATCH --output=%x.out
