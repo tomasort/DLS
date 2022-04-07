@@ -668,3 +668,212 @@ Results - Epoch: 51
 Training Loss 1.7954 	Training Accuracy 0.3288 	Training Step Time  4.0188 	Training Data Time  3.6804 	Validation Loss 2.3271 	Validation Accuracy 0.2254 
 
 Epoch #52
+TRAINING - Epoch: [52][0/391]	Time 0.333 (0.3332)	Data 0.331 (0.3314)	Loss 1.7059 (1.7059)	Acc 0.352 (0.352)	
+TRAINING - Epoch: [52][100/391]	Time 0.002 (0.0129)	Data 0.001 (0.0119)	Loss 1.9814 (1.7932)	Acc 0.329 (0.335)	
+TRAINING - Epoch: [52][200/391]	Time 0.002 (0.0111)	Data 0.001 (0.0102)	Loss 1.7673 (1.7907)	Acc 0.332 (0.333)	
+TRAINING - Epoch: [52][300/391]	Time 0.002 (0.0105)	Data 0.001 (0.0096)	Loss 1.9205 (1.7938)	Acc 0.331 (0.333)	
+TRAINING - Epoch: [52][390/391]	Time 0.001 (0.0102)	Data 0.001 (0.0094)	Loss 1.6809 (1.7931)	Acc 0.329 (0.332)	
+EVALUATING - Epoch: [52][0/79]	Time 0.358 (0.358)	Data 0.357 (0.357)	Loss 2.4369 (2.4369)	Acc 0.273 (0.273)	
+EVALUATING - Epoch: [52][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.2325 (2.3375)	Acc 0.228 (0.230)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 52
+Training Loss 1.7931 	Training Accuracy 0.3322 	Training Step Time  4.0050 	Training Data Time  3.6618 	Validation Loss 2.3375 	Validation Accuracy 0.2298 
+
+Epoch #53
+TRAINING - Epoch: [53][0/391]	Time 0.367 (0.3667)	Data 0.365 (0.3649)	Loss 1.7808 (1.7808)	Acc 0.312 (0.312)	
+TRAINING - Epoch: [53][100/391]	Time 0.002 (0.0129)	Data 0.001 (0.0120)	Loss 1.6278 (1.7724)	Acc 0.333 (0.335)	
+TRAINING - Epoch: [53][200/391]	Time 0.002 (0.0111)	Data 0.001 (0.0103)	Loss 1.8919 (1.7843)	Acc 0.329 (0.333)	
+TRAINING - Epoch: [53][300/391]	Time 0.002 (0.0106)	Data 0.001 (0.0097)	Loss 1.9020 (1.7856)	Acc 0.330 (0.332)	
+TRAINING - Epoch: [53][390/391]	Time 0.001 (0.0103)	Data 0.001 (0.0094)	Loss 1.7814 (1.7871)	Acc 0.330 (0.332)	
+EVALUATING - Epoch: [53][0/79]	Time 0.373 (0.373)	Data 0.372 (0.372)	Loss 2.7081 (2.7081)	Acc 0.219 (0.219)	
+EVALUATING - Epoch: [53][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.5251 (2.4982)	Acc 0.200 (0.201)	
+Accuracy of the network on the 10000 test images: 20%
+
+Results - Epoch: 53
+Training Loss 1.7871 	Training Accuracy 0.3316 	Training Step Time  4.0256 	Training Data Time  3.6848 	Validation Loss 2.4982 	Validation Accuracy 0.2007 
+
+Epoch #54
+TRAINING - Epoch: [54][0/391]	Time 0.276 (0.2755)	Data 0.274 (0.2737)	Loss 1.9717 (1.9717)	Acc 0.305 (0.305)	
+TRAINING - Epoch: [54][100/391]	Time 0.002 (0.0128)	Data 0.001 (0.0119)	Loss 1.8231 (1.8086)	Acc 0.323 (0.318)	
+TRAINING - Epoch: [54][200/391]	Time 0.002 (0.0111)	Data 0.001 (0.0102)	Loss 1.7979 (1.7960)	Acc 0.327 (0.322)	
+TRAINING - Epoch: [54][300/391]	Time 0.002 (0.0105)	Data 0.001 (0.0096)	Loss 1.8228 (1.7909)	Acc 0.328 (0.324)	
+TRAINING - Epoch: [54][390/391]	Time 0.001 (0.0103)	Data 0.001 (0.0094)	Loss 1.9140 (1.7844)	Acc 0.330 (0.325)	
+EVALUATING - Epoch: [54][0/79]	Time 0.290 (0.290)	Data 0.289 (0.289)	Loss 2.4712 (2.4712)	Acc 0.227 (0.227)	
+EVALUATING - Epoch: [54][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.1859 (2.3523)	Acc 0.229 (0.226)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 54
+Training Loss 1.7844 	Training Accuracy 0.3252 	Training Step Time  4.0086 	Training Data Time  3.6663 	Validation Loss 2.3523 	Validation Accuracy 0.2264 
+
+Epoch #55
+TRAINING - Epoch: [55][0/391]	Time 0.346 (0.3464)	Data 0.345 (0.3447)	Loss 1.7441 (1.7441)	Acc 0.320 (0.320)	
+TRAINING - Epoch: [55][100/391]	Time 0.002 (0.0129)	Data 0.001 (0.0119)	Loss 1.8066 (1.7735)	Acc 0.334 (0.334)	
+TRAINING - Epoch: [55][200/391]	Time 0.002 (0.0111)	Data 0.001 (0.0102)	Loss 1.6530 (1.7746)	Acc 0.332 (0.333)	
+TRAINING - Epoch: [55][300/391]	Time 0.002 (0.0105)	Data 0.001 (0.0096)	Loss 1.8142 (1.7764)	Acc 0.333 (0.333)	
+TRAINING - Epoch: [55][390/391]	Time 0.001 (0.0103)	Data 0.001 (0.0094)	Loss 1.7562 (1.7818)	Acc 0.331 (0.332)	
+EVALUATING - Epoch: [55][0/79]	Time 0.361 (0.361)	Data 0.361 (0.361)	Loss 2.4675 (2.4675)	Acc 0.258 (0.258)	
+EVALUATING - Epoch: [55][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.3731 (2.4069)	Acc 0.228 (0.227)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 55
+Training Loss 1.7818 	Training Accuracy 0.3324 	Training Step Time  4.0129 	Training Data Time  3.6710 	Validation Loss 2.4069 	Validation Accuracy 0.2272 
+
+Epoch #56
+TRAINING - Epoch: [56][0/391]	Time 0.364 (0.3637)	Data 0.362 (0.3619)	Loss 1.7562 (1.7562)	Acc 0.328 (0.328)	
+TRAINING - Epoch: [56][100/391]	Time 0.002 (0.0127)	Data 0.001 (0.0119)	Loss 1.7518 (1.7779)	Acc 0.337 (0.338)	
+TRAINING - Epoch: [56][200/391]	Time 0.010 (0.0111)	Data 0.009 (0.0102)	Loss 1.8381 (1.7744)	Acc 0.334 (0.336)	
+TRAINING - Epoch: [56][300/391]	Time 0.019 (0.0105)	Data 0.018 (0.0097)	Loss 1.7275 (1.7738)	Acc 0.334 (0.336)	
+TRAINING - Epoch: [56][390/391]	Time 0.010 (0.0103)	Data 0.009 (0.0094)	Loss 1.9042 (1.7765)	Acc 0.333 (0.335)	
+EVALUATING - Epoch: [56][0/79]	Time 0.345 (0.345)	Data 0.344 (0.344)	Loss 2.6255 (2.6255)	Acc 0.234 (0.234)	
+EVALUATING - Epoch: [56][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.2109 (2.3776)	Acc 0.213 (0.214)	
+Accuracy of the network on the 10000 test images: 21%
+
+Results - Epoch: 56
+Training Loss 1.7765 	Training Accuracy 0.3350 	Training Step Time  4.0108 	Training Data Time  3.6680 	Validation Loss 2.3776 	Validation Accuracy 0.2142 
+
+Epoch #57
+TRAINING - Epoch: [57][0/391]	Time 0.329 (0.3291)	Data 0.327 (0.3273)	Loss 1.7590 (1.7590)	Acc 0.336 (0.336)	
+TRAINING - Epoch: [57][100/391]	Time 0.002 (0.0129)	Data 0.001 (0.0121)	Loss 1.8443 (1.7698)	Acc 0.331 (0.333)	
+TRAINING - Epoch: [57][200/391]	Time 0.002 (0.0112)	Data 0.001 (0.0103)	Loss 1.7399 (1.7694)	Acc 0.332 (0.332)	
+TRAINING - Epoch: [57][300/391]	Time 0.002 (0.0106)	Data 0.001 (0.0097)	Loss 1.8692 (1.7746)	Acc 0.332 (0.332)	
+TRAINING - Epoch: [57][390/391]	Time 0.001 (0.0103)	Data 0.001 (0.0094)	Loss 1.9777 (1.7726)	Acc 0.334 (0.332)	
+EVALUATING - Epoch: [57][0/79]	Time 0.359 (0.359)	Data 0.358 (0.358)	Loss 2.4540 (2.4540)	Acc 0.211 (0.211)	
+EVALUATING - Epoch: [57][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.1432 (2.3169)	Acc 0.220 (0.219)	
+Accuracy of the network on the 10000 test images: 21%
+
+Results - Epoch: 57
+Training Loss 1.7726 	Training Accuracy 0.3321 	Training Step Time  4.0291 	Training Data Time  3.6863 	Validation Loss 2.3169 	Validation Accuracy 0.2192 
+
+Epoch #58
+TRAINING - Epoch: [58][0/391]	Time 0.365 (0.3653)	Data 0.364 (0.3636)	Loss 1.7827 (1.7827)	Acc 0.320 (0.320)	
+TRAINING - Epoch: [58][100/391]	Time 0.002 (0.0127)	Data 0.001 (0.0119)	Loss 1.7647 (1.7791)	Acc 0.330 (0.332)	
+TRAINING - Epoch: [58][200/391]	Time 0.003 (0.0111)	Data 0.002 (0.0102)	Loss 1.7793 (1.7750)	Acc 0.331 (0.332)	
+TRAINING - Epoch: [58][300/391]	Time 0.005 (0.0105)	Data 0.005 (0.0096)	Loss 1.7491 (1.7681)	Acc 0.335 (0.332)	
+TRAINING - Epoch: [58][390/391]	Time 0.004 (0.0102)	Data 0.003 (0.0094)	Loss 1.8863 (1.7700)	Acc 0.334 (0.333)	
+EVALUATING - Epoch: [58][0/79]	Time 0.317 (0.317)	Data 0.316 (0.316)	Loss 2.7061 (2.7061)	Acc 0.266 (0.266)	
+EVALUATING - Epoch: [58][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.4060 (2.4823)	Acc 0.234 (0.232)	
+Accuracy of the network on the 10000 test images: 23%
+
+Results - Epoch: 58
+Training Loss 1.7700 	Training Accuracy 0.3329 	Training Step Time  4.0012 	Training Data Time  3.6570 	Validation Loss 2.4823 	Validation Accuracy 0.2325 
+
+Epoch #59
+TRAINING - Epoch: [59][0/391]	Time 0.374 (0.3741)	Data 0.372 (0.3724)	Loss 1.7730 (1.7730)	Acc 0.312 (0.312)	
+TRAINING - Epoch: [59][100/391]	Time 0.002 (0.0129)	Data 0.001 (0.0121)	Loss 1.8256 (1.7703)	Acc 0.331 (0.332)	
+TRAINING - Epoch: [59][200/391]	Time 0.002 (0.0111)	Data 0.001 (0.0103)	Loss 1.6640 (1.7723)	Acc 0.332 (0.332)	
+TRAINING - Epoch: [59][300/391]	Time 0.002 (0.0105)	Data 0.001 (0.0097)	Loss 1.7074 (1.7662)	Acc 0.334 (0.332)	
+TRAINING - Epoch: [59][390/391]	Time 0.001 (0.0103)	Data 0.001 (0.0094)	Loss 1.5949 (1.7654)	Acc 0.335 (0.333)	
+EVALUATING - Epoch: [59][0/79]	Time 0.329 (0.329)	Data 0.328 (0.328)	Loss 2.5678 (2.5678)	Acc 0.266 (0.266)	
+EVALUATING - Epoch: [59][78/79]	Time 0.001 (0.014)	Data 0.000 (0.013)	Loss 2.2690 (2.3919)	Acc 0.227 (0.227)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 59
+Training Loss 1.7654 	Training Accuracy 0.3327 	Training Step Time  4.0171 	Training Data Time  3.6764 	Validation Loss 2.3919 	Validation Accuracy 0.2266 
+
+Epoch #60
+TRAINING - Epoch: [60][0/391]	Time 0.373 (0.3732)	Data 0.372 (0.3715)	Loss 1.6252 (1.6252)	Acc 0.359 (0.359)	
+TRAINING - Epoch: [60][100/391]	Time 0.015 (0.0128)	Data 0.014 (0.0119)	Loss 1.7002 (1.7578)	Acc 0.338 (0.335)	
+TRAINING - Epoch: [60][200/391]	Time 0.011 (0.0111)	Data 0.010 (0.0102)	Loss 1.7068 (1.7595)	Acc 0.337 (0.336)	
+TRAINING - Epoch: [60][300/391]	Time 0.010 (0.0105)	Data 0.009 (0.0096)	Loss 1.5563 (1.7615)	Acc 0.335 (0.336)	
+TRAINING - Epoch: [60][390/391]	Time 0.004 (0.0102)	Data 0.003 (0.0093)	Loss 1.6201 (1.7626)	Acc 0.335 (0.335)	
+EVALUATING - Epoch: [60][0/79]	Time 0.363 (0.363)	Data 0.362 (0.362)	Loss 2.5309 (2.5309)	Acc 0.266 (0.266)	
+EVALUATING - Epoch: [60][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.2738 (2.4105)	Acc 0.230 (0.229)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 60
+Training Loss 1.7626 	Training Accuracy 0.3355 	Training Step Time  4.0023 	Training Data Time  3.6546 	Validation Loss 2.4105 	Validation Accuracy 0.2292 
+
+Epoch #61
+TRAINING - Epoch: [61][0/391]	Time 0.360 (0.3595)	Data 0.358 (0.3578)	Loss 1.7255 (1.7255)	Acc 0.336 (0.336)	
+TRAINING - Epoch: [61][100/391]	Time 0.002 (0.0130)	Data 0.001 (0.0121)	Loss 1.8950 (1.7651)	Acc 0.337 (0.341)	
+TRAINING - Epoch: [61][200/391]	Time 0.002 (0.0112)	Data 0.001 (0.0103)	Loss 1.7356 (1.7707)	Acc 0.330 (0.337)	
+TRAINING - Epoch: [61][300/391]	Time 0.002 (0.0106)	Data 0.001 (0.0097)	Loss 1.8227 (1.7613)	Acc 0.334 (0.335)	
+TRAINING - Epoch: [61][390/391]	Time 0.001 (0.0103)	Data 0.001 (0.0094)	Loss 1.8185 (1.7623)	Acc 0.336 (0.335)	
+EVALUATING - Epoch: [61][0/79]	Time 0.366 (0.366)	Data 0.365 (0.365)	Loss 2.5169 (2.5169)	Acc 0.258 (0.258)	
+EVALUATING - Epoch: [61][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.2517 (2.3975)	Acc 0.226 (0.225)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 61
+Training Loss 1.7623 	Training Accuracy 0.3353 	Training Step Time  4.0327 	Training Data Time  3.6888 	Validation Loss 2.3975 	Validation Accuracy 0.2251 
+
+Epoch #62
+TRAINING - Epoch: [62][0/391]	Time 0.367 (0.3671)	Data 0.365 (0.3654)	Loss 1.7195 (1.7195)	Acc 0.344 (0.344)	
+TRAINING - Epoch: [62][100/391]	Time 0.002 (0.0128)	Data 0.001 (0.0119)	Loss 1.8563 (1.7685)	Acc 0.336 (0.336)	
+TRAINING - Epoch: [62][200/391]	Time 0.003 (0.0111)	Data 0.002 (0.0102)	Loss 1.7560 (1.7577)	Acc 0.339 (0.337)	
+TRAINING - Epoch: [62][300/391]	Time 0.006 (0.0105)	Data 0.006 (0.0097)	Loss 1.7777 (1.7583)	Acc 0.338 (0.337)	
+TRAINING - Epoch: [62][390/391]	Time 0.002 (0.0103)	Data 0.001 (0.0094)	Loss 1.9153 (1.7636)	Acc 0.336 (0.337)	
+EVALUATING - Epoch: [62][0/79]	Time 0.357 (0.357)	Data 0.357 (0.357)	Loss 2.4863 (2.4863)	Acc 0.250 (0.250)	
+EVALUATING - Epoch: [62][78/79]	Time 0.001 (0.014)	Data 0.000 (0.013)	Loss 2.2456 (2.3928)	Acc 0.224 (0.223)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 62
+Training Loss 1.7636 	Training Accuracy 0.3371 	Training Step Time  4.0099 	Training Data Time  3.6673 	Validation Loss 2.3928 	Validation Accuracy 0.2232 
+
+Epoch #63
+TRAINING - Epoch: [63][0/391]	Time 0.359 (0.3589)	Data 0.357 (0.3571)	Loss 1.6387 (1.6387)	Acc 0.375 (0.375)	
+TRAINING - Epoch: [63][100/391]	Time 0.002 (0.0127)	Data 0.001 (0.0118)	Loss 1.6673 (1.7477)	Acc 0.338 (0.340)	
+TRAINING - Epoch: [63][200/391]	Time 0.002 (0.0111)	Data 0.001 (0.0102)	Loss 1.6791 (1.7645)	Acc 0.334 (0.337)	
+TRAINING - Epoch: [63][300/391]	Time 0.005 (0.0105)	Data 0.005 (0.0096)	Loss 1.8382 (1.7615)	Acc 0.334 (0.336)	
+TRAINING - Epoch: [63][390/391]	Time 0.001 (0.0103)	Data 0.001 (0.0094)	Loss 1.7341 (1.7580)	Acc 0.337 (0.336)	
+EVALUATING - Epoch: [63][0/79]	Time 0.256 (0.256)	Data 0.255 (0.255)	Loss 2.5569 (2.5569)	Acc 0.250 (0.250)	
+EVALUATING - Epoch: [63][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.2616 (2.4441)	Acc 0.228 (0.228)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 63
+Training Loss 1.7580 	Training Accuracy 0.3359 	Training Step Time  4.0084 	Training Data Time  3.6642 	Validation Loss 2.4441 	Validation Accuracy 0.2277 
+
+Epoch #64
+TRAINING - Epoch: [64][0/391]	Time 0.360 (0.3598)	Data 0.358 (0.3581)	Loss 1.8218 (1.8218)	Acc 0.266 (0.266)	
+TRAINING - Epoch: [64][100/391]	Time 0.002 (0.0127)	Data 0.001 (0.0119)	Loss 1.7268 (1.7639)	Acc 0.335 (0.329)	
+TRAINING - Epoch: [64][200/391]	Time 0.002 (0.0110)	Data 0.001 (0.0102)	Loss 1.8335 (1.7604)	Acc 0.336 (0.332)	
+TRAINING - Epoch: [64][300/391]	Time 0.002 (0.0105)	Data 0.001 (0.0096)	Loss 1.5882 (1.7594)	Acc 0.337 (0.333)	
+TRAINING - Epoch: [64][390/391]	Time 0.001 (0.0102)	Data 0.001 (0.0094)	Loss 1.8799 (1.7558)	Acc 0.338 (0.334)	
+EVALUATING - Epoch: [64][0/79]	Time 0.369 (0.369)	Data 0.368 (0.368)	Loss 2.5244 (2.5244)	Acc 0.227 (0.227)	
+EVALUATING - Epoch: [64][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.3527 (2.4197)	Acc 0.225 (0.226)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 64
+Training Loss 1.7558 	Training Accuracy 0.3343 	Training Step Time  4.0049 	Training Data Time  3.6666 	Validation Loss 2.4197 	Validation Accuracy 0.2260 
+
+Epoch #65
+TRAINING - Epoch: [65][0/391]	Time 0.364 (0.3637)	Data 0.362 (0.3620)	Loss 1.8118 (1.8118)	Acc 0.336 (0.336)	
+TRAINING - Epoch: [65][100/391]	Time 0.002 (0.0128)	Data 0.001 (0.0119)	Loss 1.6855 (1.7527)	Acc 0.335 (0.335)	
+TRAINING - Epoch: [65][200/391]	Time 0.002 (0.0111)	Data 0.001 (0.0102)	Loss 1.7793 (1.7615)	Acc 0.335 (0.335)	
+TRAINING - Epoch: [65][300/391]	Time 0.006 (0.0105)	Data 0.005 (0.0097)	Loss 1.5917 (1.7546)	Acc 0.338 (0.335)	
+TRAINING - Epoch: [65][390/391]	Time 0.002 (0.0103)	Data 0.001 (0.0094)	Loss 1.8208 (1.7568)	Acc 0.337 (0.336)	
+EVALUATING - Epoch: [65][0/79]	Time 0.305 (0.305)	Data 0.305 (0.305)	Loss 2.4674 (2.4674)	Acc 0.258 (0.258)	
+EVALUATING - Epoch: [65][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.1628 (2.3943)	Acc 0.223 (0.222)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 65
+Training Loss 1.7568 	Training Accuracy 0.3360 	Training Step Time  4.0136 	Training Data Time  3.6702 	Validation Loss 2.3943 	Validation Accuracy 0.2217 
+
+Epoch #66
+TRAINING - Epoch: [66][0/391]	Time 0.375 (0.3752)	Data 0.373 (0.3735)	Loss 1.7163 (1.7163)	Acc 0.367 (0.367)	
+TRAINING - Epoch: [66][100/391]	Time 0.005 (0.0128)	Data 0.004 (0.0119)	Loss 1.8261 (1.7449)	Acc 0.342 (0.353)	
+TRAINING - Epoch: [66][200/391]	Time 0.003 (0.0111)	Data 0.002 (0.0102)	Loss 1.6756 (1.7555)	Acc 0.336 (0.346)	
+TRAINING - Epoch: [66][300/391]	Time 0.018 (0.0105)	Data 0.017 (0.0097)	Loss 1.7310 (1.7535)	Acc 0.338 (0.343)	
+TRAINING - Epoch: [66][390/391]	Time 0.001 (0.0102)	Data 0.001 (0.0093)	Loss 1.5985 (1.7532)	Acc 0.339 (0.342)	
+EVALUATING - Epoch: [66][0/79]	Time 0.370 (0.370)	Data 0.369 (0.369)	Loss 2.5934 (2.5934)	Acc 0.227 (0.227)	
+EVALUATING - Epoch: [66][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.2239 (2.4359)	Acc 0.222 (0.224)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 66
+Training Loss 1.7532 	Training Accuracy 0.3421 	Training Step Time  3.9994 	Training Data Time  3.6536 	Validation Loss 2.4359 	Validation Accuracy 0.2238 
+
+Epoch #67
+TRAINING - Epoch: [67][0/391]	Time 0.335 (0.3346)	Data 0.333 (0.3328)	Loss 1.7714 (1.7714)	Acc 0.352 (0.352)	
+TRAINING - Epoch: [67][100/391]	Time 0.002 (0.0128)	Data 0.001 (0.0120)	Loss 1.7488 (1.7548)	Acc 0.335 (0.338)	
+TRAINING - Epoch: [67][200/391]	Time 0.003 (0.0111)	Data 0.002 (0.0102)	Loss 1.8214 (1.7525)	Acc 0.338 (0.338)	
+TRAINING - Epoch: [67][300/391]	Time 0.006 (0.0105)	Data 0.005 (0.0096)	Loss 1.7121 (1.7503)	Acc 0.338 (0.338)	
+TRAINING - Epoch: [67][390/391]	Time 0.001 (0.0102)	Data 0.001 (0.0094)	Loss 1.7606 (1.7513)	Acc 0.339 (0.338)	
+EVALUATING - Epoch: [67][0/79]	Time 0.292 (0.292)	Data 0.291 (0.291)	Loss 2.5685 (2.5685)	Acc 0.273 (0.273)	
+EVALUATING - Epoch: [67][78/79]	Time 0.001 (0.014)	Data 0.000 (0.014)	Loss 2.2337 (2.4306)	Acc 0.226 (0.227)	
+Accuracy of the network on the 10000 test images: 22%
+
+Results - Epoch: 67
+Training Loss 1.7513 	Training Accuracy 0.3380 	Training Step Time  4.0077 	Training Data Time  3.6595 	Validation Loss 2.4306 	Validation Accuracy 0.2273 
+
+Epoch #68
+slurmstepd: error: *** JOB 17381136 ON gv006 CANCELLED AT 2022-04-06T17:55:47 ***
